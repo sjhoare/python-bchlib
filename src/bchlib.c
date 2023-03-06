@@ -236,7 +236,7 @@ BCH_decode(BCHObject *self, PyObject *args, PyObject *kwds)
 	result_data->ob_exports = 0;
 
 	memcpy(result_ecc->ob_bytes, ecc.buf, ecc.len);
-	Py_SET_SIZE(result_ecc, ecc_len);
+	Py_SET_SIZE(result_ecc, ecc.len);
 	result_ecc->ob_alloc = ecc.len;
 #if PY_MAJOR_VERSION >= 3
 	result_ecc->ob_start = result_ecc->ob_bytes;
